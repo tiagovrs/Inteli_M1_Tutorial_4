@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Amigo Dragão</title>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.24.1/dist/phaser.min.js"></script>
+    <script src="scripts/startScene.js"></script>
+    <script src="scripts/gameScene.js"></script>
+    <script src="scripts/finalScene.js"></script>
+    <script src="scripts/happyFinalScene.js"></script>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+</body>
+<div id='game'>
+    <script>
+
+        const config = {
+            type: Phaser.AUTO,
+            window: 1280,
+            height: 720,
+            backgroundColor: "1234FF",
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    gravity: {y: 0},
+                    debug: true
+            }},
+            scene: [startScene, gameScene, endScene, happyEndScene],
+        };
+
+        const game = new Phaser.Game(config);
+
+    </script>
+</div>
+
+</html>
